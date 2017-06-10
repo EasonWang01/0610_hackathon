@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Overview from './Overview'
+import Pathology from './Pathology'
 import './App.css';
 import Home from './Home'
 
@@ -9,11 +11,6 @@ import {
   Link
 } from 'react-router-dom'
 
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-)
 /*
 const Topic = ({ match }) => (
   <div>
@@ -54,8 +51,8 @@ const App = () => (
   <Router>
     <div>
       <Route path="/" component={Home}/>
-      <Route path="/overview" component={About}/>
-      {/*<Route path="/topics" component={Topics}/>*/}
+      <Route path="/overview" component={Overview}/>
+      <Route path="/pathology" component={Pathology}/>*/}
     </div>
   </Router>
 )

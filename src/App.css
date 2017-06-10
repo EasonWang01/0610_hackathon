@@ -27,3 +27,7 @@
 .tab {
  background: #41768f
 }
+
+.bottomIcon:hover {
+  cursor: pointer
+}
