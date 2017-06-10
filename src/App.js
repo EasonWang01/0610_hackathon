@@ -52,7 +52,7 @@ const App = () => (
     <div>
       <Route path="/" component={Home}/>
       <Route path="/overview" component={Overview}/>
-      <Route path="/pathology" component={Pathology}/>*/}
+      <Route path="/pathology" component={Pathology}/>
     </div>
   </Router>
 )

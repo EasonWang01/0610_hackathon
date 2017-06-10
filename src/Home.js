@@ -8,6 +8,14 @@ import './App.css';
       overviewTab: true
     }
   }
+  componentDidMount() {
+    
+    if(this.props.history.location.pathname === '/pathology') {
+      console.log(324)
+      this.setState({overviewTab: false})
+      this.setState({pathologyTab: true})
+    }
+  }
   clickoverview() {
     this.props.history.push("/overview");
     this.setState({overviewTab: true})
