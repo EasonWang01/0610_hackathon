@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
+import contract01 from './contract01.js' //引入contract
+var Web3 = require('web3');
+var web3 = new Web3();
 
  class Overview extends Component{
 	constructor() {
     super();
+  }
+  componentWillMount() {
+    console.log(web3);
+    window.tokenContract = web3.eth.contract(contract01.ABI).at(contract01.address);
+    window.web3 = web3;
+    web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545')); //指定為RPC server的位置
+    this.setState({ accounts: web3.eth.accounts });
+
+    web3.eth.defaultAccount = web3.eth.accounts[0]
   }
   render() {
     return (
@@ -63,3 +75,4 @@ import './App.css';
  }
 
  export default Overview
+
